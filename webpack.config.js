@@ -10,5 +10,13 @@ module.exports = {
   devServer: {
     hot: true,
     contentBase: './dist',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: 'babel-loader',
+      }
+    ]
   }
 }
