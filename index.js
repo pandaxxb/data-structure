@@ -1,10 +1,13 @@
 // import { RPNTransform, RPNCalc } from './src/quadrature';
 import { main } from './src/string/string';
 import { KMP, ArticleWordAnalysis } from './src/string/KMP';
+import { BMHSearch } from './src/string/BMH';
+import { BMSearch } from './src/string/BM';
 
 document.getElementById('main-btn').onclick = () => {
-  const text = document.getElementById('textarea').value;
-  console.log(ArticleWordAnalysis(text));
+  // const text = document.getElementById('textarea').value;
+  // console.log(ArticleWordAnalysis(text));
+  BMSearch('AABAACAADAABA', 'AABA');
 }
 
 // 四则运算初步解析
