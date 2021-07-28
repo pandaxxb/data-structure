@@ -1,11 +1,11 @@
-class SqQueue{
+export class SqQueue{
   _front = 0;
   _rear = 0;
   _arr = null;
   _MAX_LENGTH = null;
   constructor(length){
-    this._MAX_LENGTH = length;
-    this._arr = new Array(length);
+    this._MAX_LENGTH = length + 1;
+    this._arr = new Array(length + 1);
   }
 
   getLength(){
@@ -34,8 +34,8 @@ class SqQueue{
       console.error('队列为空，无元素可删除');
       return;
     }
-    const ele = this[this._front];
-    this[this._front] = undefined;
+    const ele = this._arr[this._front];
+    this._arr[this._front] = undefined;
     this._front = (this._front + 1) % this._MAX_LENGTH;
     return ele;
   }
